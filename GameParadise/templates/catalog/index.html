@@ -6,5 +6,23 @@
   <div class="container py-5">
     <h1>Catalog</h1>
     <hr>
+    {% for game in games %}
+    <article>
+      <ul>
+        <li>
+          Название: {{ game.name }}              
+        </li>
+        <li>
+          Цена: {{ game.price }}
+        </li>
+        <li>
+          Продано: {{ game.sold }}
+        </li>
+      </ul>
+    </article>
+    {% if not forloop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
   </div>
 {% endblock %}
