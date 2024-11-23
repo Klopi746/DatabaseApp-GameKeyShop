@@ -3,29 +3,29 @@
 {% with request.resolver_match.view_name as view_name %}
 
 <header>
-  <nav class="navbar navbar-light" style="background-color: lightskyblue">
+  <nav class="navbar navbar-light bg-light" data-bs-theme="light">
     <div class="container">
       <a class="navbar-brand" href="{% url 'catalog:index' %}">
         <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
         GameParadise - DataBase Driven GameShop
-      </a>        
+      </a>
       <ul class="nav  nav-pills">
         <li class="nav-item">
-          <a class="nav-link {% if view_name == 'catalog:index' %}active{% endif %}" href="{% url 'catalog:index' %}">
+          <a class="nav-link {% if view_name == 'catalog:index' %}active{% endif %}" href="{% url 'catalog:index' %}" style="color: black">
             Catalog
           </a>
         </li>
         <li class="nav-item">              
-          <a class="nav-link {% if view_name == 'about:about' %}active{% endif %}" href="{% url "about:about" %}">
+          <a class="nav-link {% if view_name == 'about:about' %}active{% endif %}" href="{% url "about:about" %}" style="color: black">
             About
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {% if view_name == 'inventory:inventory' %}active{% endif %}" href="{% url "inventory:inventory" %}">
+          <a class="nav-link {% if view_name == 'inventory:inventory' %}active{% endif %}" href="{% url "inventory:inventory" %}" style="color: black">
             Inventory
           </a>
         </li>
-      </ul>      
+      </ul>
     </div>
   </nav> 
 </header>
