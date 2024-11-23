@@ -1,1 +1,1 @@
-# GameHeaven - the DataBase Driven GameShop
+# GameParadise - the DataBase Driven GameShop

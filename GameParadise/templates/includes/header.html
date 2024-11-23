@@ -1,0 +1,33 @@
+{% load static %}
+
+{% with request.resolver_match.view_name as view_name %}
+
+<header>
+  <nav class="navbar navbar-light" style="background-color: lightskyblue">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'catalog:index' %}">
+        <img src="{% static 'img/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        GameParadise - DataBase Driven GameShop
+      </a>        
+      <ul class="nav  nav-pills">
+        <li class="nav-item">
+          <a class="nav-link {% if view_name == 'catalog:index' %}active{% endif %}" href="{% url 'catalog:index' %}">
+            Catalog
+          </a>
+        </li>
+        <li class="nav-item">              
+          <a class="nav-link {% if view_name == 'catalog:index' %}active{% endif %}" href="{% url "catalog:index" %}">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if view_name == 'catalog:index' %}active{% endif %}" href="{% url "catalog:index" %}">
+            Our Goal
+          </a>
+        </li>
+      </ul>      
+    </div>
+  </nav> 
+</header>
+
+{% endwith %}
