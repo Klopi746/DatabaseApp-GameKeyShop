@@ -1,0 +1,26 @@
+<form id="contact_form" action="{% url 'accounts:login_handler' %}" method="post">
+    {% csrf_token %}
+        <div class="form-group">
+            <table>
+                <tbody>
+                    <tr>
+                        <th align="right">
+                            <label>Введите логин:</label>
+                        </th>
+                        <td>
+                            <input type="text" name="username" maxlength="30" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="right">
+                            <label>Введите пароль:</label>
+                        </th>
+                        <td>
+                            <input type="password" name="password" maxlength="30" required>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </div>
+</form>
