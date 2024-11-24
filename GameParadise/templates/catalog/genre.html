@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block title %}
-  Catalog
+  Games in genre: {{ genre }}
 {% endblock %}
 {% block content %}
   <div class="container py-5">
-    <h1>Catalog</h1>
+    <h1>Games in genre: {{ genre }}</h1>
     <hr>
     {% for game in games %}
     <article>
