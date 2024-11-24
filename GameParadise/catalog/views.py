@@ -5,9 +5,11 @@ from catalog.models import Game
 def index(request):
     games = Game.objects.all()
     template = 'catalog/index.html'
-    return render(request, template, {'games': games})
+    logged_in = request.session.get('logged_in', False)
+    return render(request, template, {'games': games, 'logged': logged_in})
 
 def genre_games(request, genre_slug):
     games = Game.objects.filter(genre=genre_slug)
     template = 'catalog/genre.html'
-    return render(request, template, {'games': games, 'genre': genre_slug})
+    logged_in = request.session.get('logged_in', False)
+    return render(request, template, {'games': games, 'genre': genre_slug, 'logged': logged_in})

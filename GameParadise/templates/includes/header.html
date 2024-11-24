@@ -21,8 +21,8 @@
           </a>
         </li>
         <li class="nav-item">
-          {% if user_login %}
-          <a class="nav-link {% if view_name == 'accounts:logout' %}active{% endif %}" href="{% url "accounts:login" %}" style="color: black">
+          {% if logged %}
+          <a class="nav-link {% if view_name == 'accounts:logout' %}active{% endif %}" href="{% url "accounts:logout" %}" style="color: black">
             Log out
           </a>
           {% else %}
