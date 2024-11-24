@@ -7,4 +7,8 @@ def login(request):
     return render(request, template)
 
 def login_handler(request):
-    return redirect('catalog:index')
+    return redirect('/')
+
+def logout(request):
+    template = 'accounts/login.html'
+    return render(request, template)
