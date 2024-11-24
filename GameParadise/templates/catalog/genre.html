@@ -13,16 +13,16 @@
           Name: {{ game.name }}              
         </li>
         <li>
-          Price: {{ game.price }}
-        </li>
-        <li>
-          Sold: {{ game.sold }}
+          Price: {{ game.price }} btc
         </li>
         <li>
           Genre: <a href="{% url "catalog:genre_games" game.genre %}">{{ game.genre }}</a>
         </li>
         <li>
           Description: {{ game.description|truncatewords:10 }}
+        </li>
+        <li>
+          Sold: {{ game.sold }} copies
         </li>
       </ul>
     </article>
