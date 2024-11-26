@@ -2,6 +2,7 @@ asgiref==3.8.1
 attrs==24.2.0
 colorama==0.4.6
 Django==3.2.16
+exceptiongroup==1.2.2
 flake8==5.0.4
 flake8-complex-f-strings==0.1.0
 flake8-docstrings==1.7.0
@@ -14,10 +15,12 @@ mccabe==0.7.0
 packaging==24.2
 pep8-naming==0.13.3
 pluggy==1.5.0
+psycopg2==2.9.10
 py==1.11.0
 pycodestyle==2.9.1
 pydocstyle==6.3.0
 pyflakes==2.5.0
+pytest==8.3.3
 pytest-django==4.5.2
 pytz==2024.2
 snowballstemmer==2.2.0
