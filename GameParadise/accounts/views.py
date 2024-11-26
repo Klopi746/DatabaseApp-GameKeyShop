@@ -12,14 +12,19 @@ def login_handler(request):
     mail = request.POST.get('mail')
     password = request.POST.get('password')
     if Client.objects.filter(mail=mail).exists():
-        logged_in = True
-        request.session['logged_in'] = logged_in
-        return redirect('/')
+        if Client.objects.filter(mail=mail)[0].password == password:
+            logged_in = True
+            request.session['logged_in'] = logged_in
+            request.session['user_mail'] = mail
+        else:
+            template = 'accounts/login.html'
+            return render(request, template, {'is_fail': True})
     else:
         new_client = Client.objects.create_client(mail=mail, password=password)
         new_client.save()
         logged_in = True
         request.session['logged_in'] = logged_in
+        request.session['user_mail'] = mail
     return redirect('/')
 
 

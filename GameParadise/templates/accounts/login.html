@@ -5,6 +5,7 @@
 {% block content %}
   <div class="container py-5">
     <p>LogIn and Register here!</p>
+    {% if is_fail %}<p style="color: red">Error Password!</p>{% endif %}
     {% include 'includes/login_widget.html' %}
   </div>
 {% endblock %}

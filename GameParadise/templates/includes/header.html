@@ -31,6 +31,13 @@
           </a>
           {% endif %}
         </li>
+        <li class="nav-item">
+          {% if logged %}
+          <a class="nav-link" href="{% url "catalog:index" %}" style="color: black">
+            Hello, {{  user_mail }}!
+          </a>
+          {% endif %}
+        </li>
       </ul>
     </div>
   </nav> 
